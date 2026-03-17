@@ -4,6 +4,7 @@
   become: yes
   roles:
     - ceph_hosts
+    - passwordless
     - bootstrap-master
     - prepare_node
     - ssh-keys

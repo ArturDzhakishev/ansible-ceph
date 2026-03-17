@@ -1,4 +1,3 @@
----
 - name: Add hosts
   block:
     - name: Add each worker node to the Ceph orchestrator
