@@ -1,0 +1,15 @@
+---
+- name: Create S3 storage on Ceph
+  hosts: all
+  become: yes
+  roles:
+    - ceph_hosts
+    - bootstrap-master
+    - prepare_node
+    - ssh-keys
+    - add_hosts
+    - add_osds
+    - role: create_rgw
+      tags: rgw
+    - role: add_s3user
+      tags: rgw
